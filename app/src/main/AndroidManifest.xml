@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.administrator.nutritionmaster">
+
+    <uses-sdk tools:overrideLibrary="com.zkk.view.rulerview" />
+    <!-- 网络请求权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 两种provider的权限 -->
+    <!-- 仅网络定位的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true">
+
+        <!-- 登录Activity -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LogTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 注册Activity -->
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LogTheme" />
+
+        <!-- 完善资料Activity -->
+        <activity
+            android:name=".activity.CompleteInfoActivity"
+            android:theme="@style/LogTheme" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:theme="@style/LogTheme"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 完善资料Activity -->
+        <activity
+            android:name=".activity.PhysicalActivity"
+            android:theme="@style/PhyTheme" />
+        <activity android:name=".activity.TestActivity" />
+
+        <!-- 饮食计划 -->
+        <activity
+            android:name=".activity.DietPlanActivity"
+            android:theme="@style/LogTheme" />
+
+        <!-- 今日计划-添加食物 -->
+        <activity
+            android:name=".activity.AddFoodActivity"
+            android:theme="@style/LogTheme" />
+        <activity
+            android:name=".activity.DefinedFoodActivity"
+            android:theme="@style/LogTheme" />
+
+        <!-- 食物详情 -->
+        <activity
+            android:name=".activity.FoodInfoActivity"
+            android:theme="@style/LogTheme" />
+        <activity
+            android:name=".activity.AssessmentActivity"
+            android:theme="@style/LogTheme" />
+        <activity
+            android:name=".activity.DietRecordActivity"
+            android:theme="@style/LogTheme" />
+        <activity
+            android:name=".activity.ShowListActivity"
+            android:theme="@style/LogTheme"/>
+
+        <activity
+            android:name=".activity.ShowPaiActivity"
+            android:theme="@style/LogTheme">
+        </activity>
+        <activity
+            android:name=".activity.DietCareActivity"
+            android:theme="@style/LogTheme">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.nutritionmaster.activity.PhysicalActivity"
+    android:weightSum="1">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue">
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="返 回"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_alignTop="@+id/title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:text="提 交"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/submit"
+            android:layout_centerHorizontal="true"
+            android:text="信息完善"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="insideOverlay"
+        android:background="@color/cardview_light_background">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23.0dip"
+                android:includeFontPadding="false"
+                android:maxHeight="16.0sp"
+                android:text="性别"
+                android:textColor="#cc222222"
+                android:textSize="15.0sp"/>
+
+            <CheckBox
+                android:id="@+id/btn_register_info_sex"
+                android:layout_width="250.0dip"
+                android:layout_height="82.0dip"
+                android:layout_marginTop="11.0dip"
+                android:background="@drawable/user_sex_selector"
+                android:button="@null"
+                android:gravity="center"/>-->
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_marginBottom="23.0dip"
+                android:layout_marginTop="27.0dip"
+                android:background="@drawable/register_info_line"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:maxHeight="17.0sp"
+                android:text="身高(cm)"
+                android:textColor="#cc222222"
+                android:textSize="15.0sp"/>
+
+            <TextView
+                android:id="@+id/tv_register_info_height_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11.0dip"
+                android:includeFontPadding="false"
+                android:maxHeight="24.0sp"
+                android:text="165"
+                android:textColor="#cc222222"
+                android:textSize="24.0sp"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.06">
+
+                <com.zkk.view.rulerview.RulerView
+                    android:id="@+id/ruler_height"
+                    android:layout_width="fill_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="24.0dip"
+                    app:alphaEnable="true"
+                    app:lineColor="@color/blue"
+                    app:lineMaxHeight="40dp"
+                    app:lineMidHeight="30dp"
+                    app:lineMinHeight="20dp"
+                    app:lineSpaceWidth="10dp"
+                    app:lineWidth="2dip"
+                    app:maxValue="250.0"
+                    app:minValue="80.0"
+                    app:perValue="1"
+                    app:selectorValue="165.0"
+                    app:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="14.0dip"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/user_info_ruler_height"
+                    android:layout_alignTop="@+id/ruler_height"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_marginBottom="23.0dip"
+                android:layout_marginTop="27.0dip"
+                android:background="@drawable/register_info_line"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:maxHeight="17.0sp"
+                android:text="体重(kg)"
+                android:textColor="#cc222222"
+                android:textSize="15.0sp"/>
+
+            <TextView
+                android:id="@+id/tv_register_info_weight_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11.0dip"
+                android:includeFontPadding="false"
+                android:maxHeight="24.0sp"
+                android:text="55"
+                android:textColor="#cc222222"
+                android:textSize="24.0sp"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100dp">
+
+                <com.zkk.view.rulerview.RulerView
+                    android:id="@+id/ruler_weight"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="24.0dip"
+                    app:alphaEnable="true"
+                    app:lineColor="@color/blue"
+                    app:textColor="@color/black"
+                    app:lineWidth="2dip"/>
+
+                <ImageView
+                    android:layout_width="14.0dip"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/user_info_ruler_height" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.01"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:text="生日"
+                    android:textSize="18sp" />
+
+                <DatePicker
+                    android:id="@+id/dpPicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/textView4"
+                    android:layout_centerHorizontal="true"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
